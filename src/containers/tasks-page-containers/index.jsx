@@ -3,17 +3,18 @@ import { useLoaderData } from 'react-router-dom';
 import { EmptyScreen } from './empty-screen';
 import * as S from './styles';
 function TasksPageContainer() {
-  const data = useLoaderData();
+  const tasks = useLoaderData();
 
   return (
     <S.TasksPageContainer>
-      {!data?.length ? (
+      {!tasks?.length ? (
         <EmptyScreen />
       ) : (
         <>
+  
           <S.Button to="/tasks/create">Create Task</S.Button>
           <S.TaskList>
-            {data.map(task => (
+            {tasks.map(task => (
               <S.TaskListItem key={task.id}>
                 <S.Task to={`/tasks/${task.id}`}>
                   <S.TaskCompleted>
