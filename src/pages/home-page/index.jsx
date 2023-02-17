@@ -1,7 +1,7 @@
 import React from 'react';
-
+import { HomePageContainer } from '../../containers/home-page-containers';
 function HomePage() {
-  return <div>HomePage</div>;
+  return <HomePageContainer/>;
 }
 
 export  {HomePage};
