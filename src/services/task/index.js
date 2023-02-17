@@ -8,7 +8,7 @@ export const waitFor = async (data, ms) => {
 
 export const getTasks = async () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  waitFor(tasks);
+ return waitFor(tasks);
 };
 export const addTask = async task => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
